@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нашият Сайт</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /*Меню*/
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #198754;
+        }
+
+        /*Меню*/
+
+        /*HERO*/
+        .hero {
+            background: url('images/header.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .hero a {
+            background-color: #00aced;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #0084b4;
+        }
+
+        /*HERO*/
+
+        /*Кои сме ние*/
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .section-about-us {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-about-us img {
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .section-about-us .content {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .section-about-us h2 {
+            margin-top: 0;
+        }
+
+        .section-about-us p {
+            text-align: justify;
+        }
+
+        /*Кои сме ние*/
+
+        /*Услугу*/
+        .services-container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .service-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: calc(50% - 10px);
+        }
+
+        .service-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .service-box h3 {
+            margin: 15px 0;
+        }
+
+        .service-box p {
+            text-align: justify;
+        }
+
+        /*Услуги*/
+
+
+
+        /*Секция Иконки*/
+        .icon-section {
+            background-color: #f0f0f0;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .icon-container .icon-box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #198754;
+            margin: 0 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .icon-container .icon-box i {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #f0f0f0;
+        }
+
+        .icon-container .icon-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .icon-container .icon-box p {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        /*Секция иконки*/
+        .section-services {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-services h2 {
+            margin-top: 0;
+        }
+
+        .section-services p {
+            text-align: justify;
+        }
+
+        /*Фотогалерия - Image Gallery*/
+        .section-gallery {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-gallery h2 {
+            margin-top: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .gallery img {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /*Фотогалерия - Image Gallery*/
+
+        .section-contact {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+
+        /*CONTACT FORM*/
+        .section-contact .form-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .section-contact .form-container h2 {
+            margin-top: 0;
+        }
+
+        .section-contact .form-container label,
+        .section-contact .form-container input,
+        .section-contact .form-container textarea,
+        .section-contact .form-container button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #198754;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            background: #198754;
+            color: #fff;
+        }
+
+        .form-container button:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .section-contact .form-container textarea {
+            height: 150px;
+        }
+
+        .section-contact .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-contact .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /*CONTACT FORM*/
+
+        /*FOOTER*/
+        footer {
+            background-color: #198754;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-icons li {
+            margin: 0 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00aced;
+        }
+        /*FOOTER*/
+    </style>
+</head>
+
+<body>
+    <!--Меню-->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Начало</a></li>
+                <li><a href="#about">За нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#gallery">Фотогалерия</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Меню-->
+
+    <!--HERO-->
+    <div id="home" class="hero">
+        <h1>Добре дошли в нашия сайт</h1>
+        <p>Опазване на природата и околната среда</p>
+        <a href="#about">Научете повече</a>
+    </div>
+    <!--HERO-->
+
+    <!--Кои сме ние-->
+    <div class="container">
+        <section id="about" class="section-about-us">
+            <img src="images/_286acb20-4c5e-4f27-8943-2d24a12d8453.jfif" alt="Природа и околна среда">
+            <div class="content">
+                <h2>Кои сме ние</h2>
+                <p>Ние сме екип от ентусиасти, които се грижат за опазването на природата и околната среда.
+                    Нашата мисия е да повишим съзнанието за важността на устойчивото развитие и да насърчаваме
+                    екологични практики във всички аспекти на живота. Чрез различни инициативи и проекти,
+                    ние се стремим да създадем по-зелено и по-чисто бъдеще за нашата планета.</p>
+                <p>Нашите дейности включват организиране на еко-събития, засаждане на дървета,
+                    почистване на замърсени зони и образователни кампании. Вярваме,
+                    че всяка малка стъпка към по-добра околна среда е от значение и
+                    затова насърчаваме всеки да се включи в нашите усилия за опазване на природата.</p>
+            </div>
+        </section>
+        <!--Кои сме ние-->
+
+        <!--Секция с иконки-->
+        <section class="icon-section">
+            <div class="icon-container">
+                <div class="icon-box">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Опазване на природата</h3>
+                    <p>Нашата мисия е да се грижим за околната среда и природните ресурси.</p>
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Устойчиво развитие</h3>
+                    <p>Промотираме устойчиви практики и решения за по-добро бъдеще.</p>
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-globe"></i>
+                    <h3>Глобално въздействие</h3>
+                    <p>Работим за промяна на света, започвайки от местното ниво.</p>
+                </div>
+            </div>
+        </section>
+        <!--Секция с иконки-->
+
+        <!--Услуги-->
+        <section id="services" class="section-services">
+            <h2>Услуги</h2>
+            <div class="services-container">
+                <div class="service-box">
+                    <img src="images/_f60c653b-311e-4289-adab-f7cc3e22901f.jfif" alt="Доброволческа дейност">
+                    <h3>Доброволческа дейност</h3>
+                    <p>Присъединете се към нашите доброволчески инициативи и помогнете за опазването на природата.
+                        Участвайте в различни проекти и събития.</p>
+                    <p><strong>Цена:</strong> Безплатно</p>
+                </div>
+                <div class="service-box">
+                    <img src="images/_5500e5ee-818f-4777-8aef-09a2a2730ee5.jfif" alt="Образователни материали">
+                    <h3>Списания</h3>
+                    <p>Предлагаме богат набор от образователни материали и брошури, които ще ви помогнат да научите
+                        повече за устойчивото развитие и екологичните практики.</p>
+                    <p><strong>Цена:</strong> В зависимост от материала</p>
+                </div>
+                <div class="service-box">
+                    <img src="images/consultation.jfif" alt="Консултации">
+                    <h3>Консултации</h3>
+                    <p>Предлагаме консултации по устойчиво развитие за фирми и индивидуални клиенти. Свържете се с нас,
+                        за да научите как можете да допринесете за по-зелено бъдеще.</p>
+                    <p><strong>Цена:</strong> По договаряне</p>
+                </div>
+                <div class="service-box">
+                    <img src="images/events.jfif" alt="Организация на събития">
+                    <h3>Организация на събития</h3>
+                    <p>Организираме разнообразни екологични събития и кампании, които имат за цел да повишат съзнанието
+                        за опазването на околната среда.</p>
+                    <p><strong>Цена:</strong> По договаряне</p>
+                </div>
+            </div>
+        </section>
+        <!--Услуги-->
+
+        <!--Фотогалерия - Image Gallery-->
+        <section id="gallery" class="section-gallery">
+            <h2>Фотогалерия</h2>
+            <div class="gallery">
+                <img src="images/1.jpg" alt="Дейност 1">
+                <img src="images/2.jpg" alt="Дейност 2">
+                <img src="images/3.jpg" alt="Дейност 3">
+                <img src="images/4.jpg" alt="Дейност 4">
+            </div>
+        </section>
+        <!--Фотогалерия - Image Gallery-->
+
+        <!--Контактна Форма-->
+        <section id="contact" class="section-contact">
+            <div class="form-container">
+                <h2>Пишете ни</h2>
+                <form>
+                    <label for="name">Име</label>
+                    <input type="text" id="name" name="name" placeholder="Вашето име">
+
+                    <label for="email">Имейл</label>
+                    <input type="email" id="email" name="email" placeholder="Вашият имейл">
+
+                    <label for="message">Съобщение</label>
+                    <textarea id="message" name="message" placeholder="Вашето съобщение"></textarea>
+
+                    <button type="submit">Изпрати</button>
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="images/beach.jpg" alt="Контакти">
+            </div>
+        </section>
+    </div>
+    <!--Контактна Форма-->
+
+    <!--FOOTER-->
+    <footer>
+        <ul class="social-icons">
+            <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+    </footer>
+    <!--FOOTER-->
+</body>
+
+</html>
